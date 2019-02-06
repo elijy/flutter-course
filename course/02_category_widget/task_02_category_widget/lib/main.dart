@@ -29,10 +29,23 @@ class UnitConverterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Unit Converter',
       home: Scaffold(
+        appBar: AppBar (
+          title: Text(
+            'Flutter demo',
+            style: TextStyle(
+              fontSize: 30
+            )
+          ),
+          elevation: 0.0,
+          backgroundColor: Colors.green[100]
+        ),
         backgroundColor: Colors.green[100],
         body: Center(
           // TODO: Determine what properties you'll need to pass into the widget
-          child: Category(),
+          child: Category(
+            name: _categoryName,
+            iconLocation: _categoryIcon
+          ),
         ),
       ),
     );
